@@ -1,0 +1,41 @@
+<div>
+    <div class="feed">
+        <div class="feedheader">
+            <p>News Feed</p>
+        </div>
+
+        <div *ngFor="let tweet of tweets; let i = index;" class="grid-container"
+        [ngStyle]="{'z-index': 3+i}">
+        <div class="Username"><p style="font-size: 30px;">{{tweet.email}}</p></div>
+        <div class="icon">
+            <img class="avatar" src="assets/pictures/anonim.jpg" alt="avatar" >
+        </div>
+        <div class="Content">
+            <p>{{tweet.content}}</p>
+        </div>  
+        <div class="footer">
+            <div>
+                <div>
+                    <a ><img class="comment" style="border-radius: 50%;" [src]="commentUrl" alt="comment" border="0"></a>
+                </div>
+                <div>
+                    <p style="margin-top: 10px; margin-left: 10px;">{{ tweet.comments }}</p>
+                </div>
+                <div>
+                    <a ><img class="like" name="like_tweet" style="margin-left: 70px; border-radius: 50%;" [src]="likeUrl" alt="like" border="0"></a>
+                </div>
+                <div>
+                    <p style="margin-top: 10px; margin-left: 10px;">{{ tweet.likes }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="navbar">
+        <p>Don't miss out on anything!</p>
+        <a href="login">Log in</a>
+        <a href="register">Sign up</a>
+    </div>
+</div>

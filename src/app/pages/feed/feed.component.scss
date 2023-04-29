@@ -1,0 +1,178 @@
+.feedheader {
+    padding: 20px;
+    font-size: xx-large;
+    font-style: bold;
+
+    background-color: white;
+    padding: 10px;
+
+    border-color: whitesmoke;
+    border-left: 1px;
+    border-left-style: solid;
+    border-left-color: whitesmoke;
+
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color: whitesmoke;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+.Username { 
+    grid-area: Username;
+    text-align: left;
+    font-size: 40px;
+}
+.icon { 
+    grid-area: icon;
+    text-align: center;
+}
+.Content { 
+    grid-area: main; 
+    font-size: 18px;
+}
+
+.footer { 
+    grid-area: footer;
+    text-align: center;
+}
+.footer > div {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    justify-content: center;
+    text-align: center;
+}
+.comment:hover {
+    background-color: lightblue;
+}
+.like {
+    border: 0px;
+}
+.like:hover {
+    background-color: lightcoral;
+}
+.avatar {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'icon Username Username'
+    'icon main main'
+    'footer footer footer';
+
+    grid-template-columns: 15% 75% 10%;
+    
+    background-color: white;
+
+    border-color: whitesmoke;
+    border-left: 1px;
+    border-left-style: solid;
+    border-left-color: whitesmoke;
+
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color: whitesmoke;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+.grid-container > div {
+    padding: 5px;
+    margin: 5,5,5,5;
+}
+.grid-container:hover{
+    background-color: whitesmoke;
+}
+.grid-container > div > p{
+    padding: 10px;
+}
+
+.item {
+
+    border-color: whitesmoke;
+    border-left: 1px;
+    border-left-style: solid;
+    border-left-color: whitesmoke;
+
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color: whitesmoke;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+
+    border-top: 0px;
+
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+.item:hover {
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    background-color: whitesmoke;
+}
+.feed {
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #958ee4;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+  
+.navbar a {
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: left;
+    display: block;
+    color: white;
+    border-color: white;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 70px;
+}
+.navbar p{
+    text-align: center;
+    padding: 15px 15px;
+    color: white;
+    font-size: 20px;
+}
+  
+ 
+.navbar a:hover {
+    background-color: #8c83ef;
+}

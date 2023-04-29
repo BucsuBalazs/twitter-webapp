@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "twitter-7fb3c": {
+      "hosting": {
+        "twitter": [
+          "twitter-7fb3c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "twitter-7fb3c"
+  }
+}

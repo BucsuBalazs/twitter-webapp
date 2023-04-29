@@ -1,0 +1,66 @@
+<div class="base-grid">
+    <div class="feed">
+        <div>
+            <img class="avatar2" src="assets/pictures/anonim.jpg" alt="myavatar" >
+        </div>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="emaildiv"><!--(focus)="onFocus()" (blur)="onBlur()"-->
+                <input type="text" class="username_display" formControlName="username"  (enter)="onEnter()" value="{{ user.username }}">
+                <button *ngIf="showButton" class="username_set"  type="submit" >Set</button>
+            </div>
+        </form>
+        <div *ngFor="let tweet of tweets; let i = index;" class="grid-container"
+        [ngStyle]="{'z-index': 3+i}">
+        <div class="Username"><p style="font-size: 30px;">{{tweet.email}}</p></div>
+        <div class="icon"><img class="avatar" src="assets/pictures/anonim.jpg" alt="avatar" ></div>
+        <div class="Content"><p>{{tweet.content}}</p></div>  
+        <div class="dropdown">
+            <img class="dropdown-trigger" src="assets/icons/more.svg" alt="more" >
+            <div class="dropdown-menu">
+                <a (click)="delete(tweet)">Delete</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <div>
+                    <a ><img class="comment" style="border-radius: 50%;" [src]="commentUrl" alt="comment" border="0"></a>
+                </div>
+                <div>
+                    <p style="margin-top: 10px; margin-left: 10px;">{{ tweet.comments }}</p>
+                </div>
+                <div>
+                    <a ><img class="like" name="like_tweet" style="margin-left: 70px; border-radius: 50%;" [src]="likeUrl" alt="like" border="0"></a>
+                </div>
+                <div>
+                    <p style="margin-top: 10px; margin-left: 10px;">{{ tweet.likes }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="menu">
+        <div>
+            <img class="twitter_pic" src="assets/pictures/logo_of_twitter.svg.png" alt="twitter icon" >
+        </div>
+        <div>
+            <a class="profile_button" (click)="home()">
+                <img class="profile_icon" src="assets/icons/House-08.png" alt="home">
+                Home
+            </a>
+        </div>
+        <div>
+            <a class="profile_button" (click)="profile()">
+                <img class="profile_icon" src="assets/icons/User-Profile.png" alt="profile">
+                Profile
+            </a>
+        </div>
+        <div>
+            <a class="profile_button" (click)="logout()">
+                <img class="profile_icon" src="assets/icons/LogoutDoor-WF.png" alt="profile">
+                Log out
+            </a>
+        </div>
+    </div>
+
+
+</div>

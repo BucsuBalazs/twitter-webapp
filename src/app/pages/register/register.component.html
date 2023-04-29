@@ -1,0 +1,33 @@
+<div class="base">
+    <div class="logform">
+
+        <h1>Welcome!</h1>
+        <div>
+            <mat-form-field>
+                <mat-label for="email">E-mail: </mat-label><input matInput type="text" [formControl]="email" />
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label for="password">Password: </mat-label><input matInput type="password" [formControl]="password" />
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label for="password2">Password again: </mat-label><input matInput type="password" [formControl]="password2" />
+            </mat-form-field>
+        </div>
+
+        <div class="footer">
+            <span>
+                <span><button mat-raised-button color="primary" (click)="register()">Register</button></span>
+            </span>
+            <span>
+                <span><button mat-raised-button color="primary" (click)="goback()">Back</button></span>
+            </span>
+        </div>
+        <div *ngIf="showText">
+            Something went wrong.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,271 @@
+.base-grid {
+    display: grid;
+    grid-template-areas:
+    'left menu feed search right';
+
+    grid-template-columns: 10% 20% 40% 20% 10%;
+
+    height: 100%;
+
+}
+
+.feed {
+
+    display: block;
+    grid-area: feed;
+    width: 100%;
+    height: 100%;
+
+    padding: 0px;
+
+    justify-content: center;
+    text-align: center;
+
+    
+    border-color: whitesmoke;
+    border-left: 1px;
+    border-left-style: solid;
+    border-left-color: whitesmoke;
+
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color: whitesmoke;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+.avatar2 {
+    border-radius: 50%;
+    width: 256px;
+    height: 256px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.username_display{
+    font-size: x-large;
+
+    width: 40%;
+
+    border-radius: 30px;
+
+    width: auto;
+
+    text-align: center;
+
+
+    border-width: 1px 1px 1px 1px;
+
+    margin-bottom: 20px;
+
+
+    cursor: pointer;
+}
+
+
+.username_set{
+    font-size: large;
+    width: 50px;
+    color: white;
+    background-color: #958ee4;
+    padding: 5px 5px 5px 5px;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.username_set:hover {
+    background-color: #8c83ef;
+}
+
+.menu {
+    grid-area: menu;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+}
+.menu > div > a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.twitter_pic {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 128px;
+    height: 128px;
+    transform: rotate(10deg);
+}
+.profile_icon {
+    border-radius: 0%;
+    border: 0;
+    width: 32px;
+    height: 32px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.profile_button {   
+    font-size: xx-large;
+    background-color: white;
+    color: black;
+    border: 0;
+    border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 15px 15px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+.profile_button:hover {
+    background-color: whitesmoke;
+}
+
+.emaildiv {
+    width: 100%;
+    margin: 0,0,0,0;
+    
+    display: inline-block;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'icon Username more'
+    'icon main main'
+    'footer footer footer';
+
+    grid-template-columns: 15% 75% 10%;
+
+    background-color: white;
+
+    position: relative;
+    z-index: 3;
+
+    border-color: whitesmoke;
+    border-left: 1px;
+    border-left-style: solid;
+    border-left-color: whitesmoke;
+
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color: whitesmoke;
+
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+.grid-container > div {
+    padding: 5px 5px 5px 5px;
+}
+.grid-container:hover{
+    background-color: whitesmoke;
+}
+.grid-container > div > p{
+    padding: 10px;
+}
+
+.Username { 
+    grid-area: Username;
+    text-align: left;
+    font-size: 40px;
+}
+.icon { 
+    grid-area: icon;
+    text-align: center;
+}
+.Content { 
+    grid-area: main; 
+    font-size: 18px;
+    text-align: left;
+}
+
+.footer { 
+    grid-area: footer;
+    text-align: center;
+}
+.footer > div {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    justify-content: center;
+    text-align: center;
+}
+.comment:hover {
+    background-color: lightblue;
+}
+.like {
+    border: 0px;
+}
+.like:hover {
+    background-color: lightcoral;
+}
+.avatar {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+.more:hover {
+    background-color: lightgrey;
+}
+.dropdown { 
+    grid-area: more;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+}
+
+  
+.dropdown-trigger {
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+  
+.dropdown-menu {
+    position: absolute;
+    //top: 100%;
+    //left: 0;
+    //z-index: 1;
+    display: none;
+    background-color: lightgrey;
+}
+  
+.dropdown-menu a:hover {
+    background-color: grey;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px;
+
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+    
+}
+  
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
